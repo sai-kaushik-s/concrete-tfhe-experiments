@@ -1,0 +1,49 @@
+2025-09-17 12:09:43 - INFO - common - Starting FHE repeated addition script to observe noise growth...
+2025-09-17 12:09:43 - INFO - common - Arguments: plaintext_modulus=4294967295, initial_value=253, value_to_add=127
+2025-09-17 12:09:43 - INFO - common - Circuit successfully compiled.
+2025-09-17 12:09:43 - INFO - common - Compiler statistics:
+
+Statistics
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+size_of_secret_keys: 12560
+size_of_bootstrap_keys: 0
+size_of_keyswitch_keys: 0
+p_error: 6.988629375415714e-06
+global_p_error: 6.988629375415714e-06
+complexity: 1570.0
+functions: {
+    add: {
+        size_of_inputs: 25136
+        size_of_outputs: 12568
+        programmable_bootstrap_count: 0
+        key_switch_count: 0
+        packing_key_switch_count: 0
+        clear_addition_count: 0
+        encrypted_addition_count: 1
+        encrypted_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=1570): 1
+        }
+        clear_multiplication_count: 0
+        encrypted_negation_count: 0
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2025-09-17 12:09:43 - INFO - common - Encrypting initial accumulator with 253 and the constant with 127.
+2025-09-17 12:09:43 - INFO - common - ============================================================
+2025-09-17 12:09:43 - INFO - common - Starting repeated addition loop to observe noise growth...
+2025-09-17 12:09:43 - INFO - common - ============================================================
+2025-09-17 12:09:43 - INFO - common - Iteration   1: OK | Expected: 380   | Decrypted: 380  
+2025-09-17 12:09:43 - INFO - common - Iteration   2: OK | Expected: 507   | Decrypted: 507  
+2025-09-17 12:09:43 - INFO - common - Iteration   3: OK | Expected: 634   | Decrypted: 634  
+2025-09-17 12:09:43 - INFO - common - Iteration   4: OK | Expected: 761   | Decrypted: 761  
+2025-09-17 12:09:43 - INFO - common - Iteration   5: OK | Expected: 888   | Decrypted: 888  
+2025-09-17 12:09:43 - INFO - common - Iteration   6: OK | Expected: 1015  | Decrypted: 1015 
+2025-09-17 12:09:43 - INFO - common - Iteration   7: OK | Expected: 1142  | Decrypted: 1142 
+2025-09-17 12:09:43 - INFO - common - Iteration   8: FAIL | Expected: 1269  | Decrypted: 1268 
+2025-09-17 12:09:43 - INFO - common - ------------------------------------------------------------
+2025-09-17 12:09:43 - ERROR - common - MISMATCH DETECTED! The noise has grown too large, causing a decryption error.
+2025-09-17 12:09:43 - INFO - common - A total of 7 successful additions were performed.
+2025-09-17 12:09:43 - INFO - common - Total time for loop: 0.0365 seconds.
+2025-09-17 12:09:43 - INFO - common - ------------------------------------------------------------

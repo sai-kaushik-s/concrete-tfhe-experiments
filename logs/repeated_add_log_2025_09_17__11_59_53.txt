@@ -1,0 +1,33 @@
+2025-09-17 11:59:53 - INFO - common - Starting FHE repeated addition script to observe noise growth...
+2025-09-17 11:59:53 - INFO - common - Arguments: plaintext_modulus=255, initial_value=253, value_to_add=127
+2025-09-17 11:59:53 - INFO - common - Circuit successfully compiled.
+2025-09-17 11:59:53 - INFO - common - Compiler statistics:
+
+Statistics
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+size_of_secret_keys: 5088
+size_of_bootstrap_keys: 0
+size_of_keyswitch_keys: 0
+p_error: 7.069998343712301e-06
+global_p_error: 7.069998343712301e-06
+complexity: 636.0
+functions: {
+    add: {
+        size_of_inputs: 10192
+        size_of_outputs: 5096
+        programmable_bootstrap_count: 0
+        key_switch_count: 0
+        packing_key_switch_count: 0
+        clear_addition_count: 0
+        encrypted_addition_count: 1
+        encrypted_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=636): 1
+        }
+        clear_multiplication_count: 0
+        encrypted_negation_count: 0
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2025-09-17 11:59:53 - INFO - common - Encrypting initial accumulator with 253 and the constant with 127.

@@ -1,0 +1,69 @@
+2025-09-17 12:12:03 - INFO - common - Starting FHE repeated addition script to observe noise growth...
+2025-09-17 12:12:03 - INFO - common - Arguments: plaintext_modulus=4294967295, initial_value=253, value_to_add=127
+2025-09-17 12:12:03 - INFO - common - Circuit successfully compiled.
+2025-09-17 12:12:03 - INFO - common - Compiler statistics:
+
+Statistics
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+size_of_secret_keys: 12560
+size_of_bootstrap_keys: 0
+size_of_keyswitch_keys: 0
+p_error: 6.988629375415714e-06
+global_p_error: 6.988629375415714e-06
+complexity: 1570.0
+functions: {
+    add: {
+        size_of_inputs: 25136
+        size_of_outputs: 12568
+        programmable_bootstrap_count: 0
+        key_switch_count: 0
+        packing_key_switch_count: 0
+        clear_addition_count: 0
+        encrypted_addition_count: 1
+        encrypted_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=1570): 1
+        }
+        clear_multiplication_count: 0
+        encrypted_negation_count: 0
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2025-09-17 12:12:03 - INFO - common - Encrypting initial accumulator with 253 and the constant with 127.
+2025-09-17 12:12:03 - INFO - common - ============================================================
+2025-09-17 12:12:03 - INFO - common - Starting repeated addition loop to observe noise growth...
+2025-09-17 12:12:03 - INFO - common - ============================================================
+2025-09-17 12:12:03 - INFO - common - Iteration   1: OK | Expected: 380   | Decrypted: 380  
+2025-09-17 12:12:03 - INFO - common - Iteration   2: OK | Expected: 507   | Decrypted: 507  
+2025-09-17 12:12:03 - INFO - common - Iteration   3: OK | Expected: 634   | Decrypted: 634  
+2025-09-17 12:12:03 - INFO - common - Iteration   4: OK | Expected: 761   | Decrypted: 761  
+2025-09-17 12:12:03 - INFO - common - Iteration   5: OK | Expected: 888   | Decrypted: 888  
+2025-09-17 12:12:03 - INFO - common - Iteration   6: OK | Expected: 1015  | Decrypted: 1015 
+2025-09-17 12:12:03 - INFO - common - Iteration   7: OK | Expected: 1142  | Decrypted: 1142 
+2025-09-17 12:12:03 - INFO - common - Iteration   8: OK | Expected: 1269  | Decrypted: 1269 
+2025-09-17 12:12:03 - INFO - common - Iteration   9: OK | Expected: 1396  | Decrypted: 1396 
+2025-09-17 12:12:03 - INFO - common - Iteration  10: OK | Expected: 1523  | Decrypted: 1523 
+2025-09-17 12:12:03 - INFO - common - Iteration  11: OK | Expected: 1650  | Decrypted: 1650 
+2025-09-17 12:12:03 - INFO - common - Iteration  12: OK | Expected: 1777  | Decrypted: 1777 
+2025-09-17 12:12:03 - INFO - common - Iteration  13: OK | Expected: 1904  | Decrypted: 1904 
+2025-09-17 12:12:03 - INFO - common - Iteration  14: OK | Expected: 2031  | Decrypted: 2031 
+2025-09-17 12:12:03 - INFO - common - Iteration  15: OK | Expected: 2158  | Decrypted: 2158 
+2025-09-17 12:12:03 - INFO - common - Iteration  16: OK | Expected: 2285  | Decrypted: 2285 
+2025-09-17 12:12:03 - INFO - common - Iteration  17: OK | Expected: 2412  | Decrypted: 2412 
+2025-09-17 12:12:03 - INFO - common - Iteration  18: OK | Expected: 2539  | Decrypted: 2539 
+2025-09-17 12:12:03 - INFO - common - Iteration  19: OK | Expected: 2666  | Decrypted: 2666 
+2025-09-17 12:12:03 - INFO - common - Iteration  20: OK | Expected: 2793  | Decrypted: 2793 
+2025-09-17 12:12:03 - INFO - common - Iteration  21: OK | Expected: 2920  | Decrypted: 2920 
+2025-09-17 12:12:03 - INFO - common - Iteration  22: OK | Expected: 3047  | Decrypted: 3047 
+2025-09-17 12:12:03 - INFO - common - Iteration  23: OK | Expected: 3174  | Decrypted: 3174 
+2025-09-17 12:12:03 - INFO - common - Iteration  24: OK | Expected: 3301  | Decrypted: 3301 
+2025-09-17 12:12:03 - INFO - common - Iteration  25: OK | Expected: 3428  | Decrypted: 3428 
+2025-09-17 12:12:03 - INFO - common - Iteration  26: OK | Expected: 3555  | Decrypted: 3555 
+2025-09-17 12:12:03 - INFO - common - Iteration  27: OK | Expected: 3682  | Decrypted: 3682 
+2025-09-17 12:12:03 - INFO - common - Iteration  28: FAIL | Expected: 3809  | Decrypted: 3808 
+2025-09-17 12:12:03 - INFO - common - ------------------------------------------------------------
+2025-09-17 12:12:03 - ERROR - common - MISMATCH DETECTED! The noise has grown too large, causing a decryption error.
+2025-09-17 12:12:03 - INFO - common - A total of 27 successful additions were performed.
+2025-09-17 12:12:03 - INFO - common - Total time for loop: 0.0984 seconds.
+2025-09-17 12:12:03 - INFO - common - ------------------------------------------------------------

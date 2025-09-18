@@ -1,0 +1,62 @@
+2025-09-17 11:48:52 - INFO - common - Starting FHE script...
+2025-09-17 11:48:52 - INFO - common - Arguments: plaintext_modulus=255, plaintext_a=253, plaintext_b=127
+2025-09-17 11:48:52 - INFO - common - Circuit drawing saved to circuit/multiply_2025_09_17__11_48_52.png
+2025-09-17 11:48:52 - INFO - common - MLIR saved to circuit/multiply_2025_09_17__11_48_52.mlir
+2025-09-17 11:49:31 - INFO - common - Encryption successful for a=253, b=127
+2025-09-17 11:49:31 - INFO - common - Size of ciphertext a: 32799
+2025-09-17 11:49:31 - INFO - common - Size of ciphertext b: 32799
+2025-09-17 11:49:37 - INFO - common - Size of ciphertext result: 32799
+2025-09-17 11:49:37 - INFO - common - Time to compute the multiplyition: 6.830383s
+2025-09-17 11:49:37 - INFO - common - Decryption result: 32131
+2025-09-17 11:49:37 - INFO - common - Decrypted result matches expected value.
+2025-09-17 11:49:37 - INFO - common - Compiler statistics:
+
+Statistics
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+size_of_secret_keys: 270456
+size_of_bootstrap_keys: 3268411392
+size_of_keyswitch_keys: 1908408320
+p_error: 9.974665205367475e-06
+global_p_error: 1.994923091678899e-05
+complexity: 10487527394.0
+functions: {
+    multiply: {
+        size_of_inputs: 524304
+        size_of_outputs: 262152
+        programmable_bootstrap_count: 2
+        programmable_bootstrap_count_per_parameter: {
+            BootstrapKeyParam(polynomial_size=32768, glwe_dimension=1, input_lwe_dimension=1039, level=3, base_log=11, variance=0.000000): 2
+        }
+        key_switch_count: 2
+        key_switch_count_per_parameter: {
+            KeyswitchKeyParam(level=7, base_log=3, variance=0.000000): 2
+        }
+        packing_key_switch_count: 0
+        clear_addition_count: 1
+        clear_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=32768): 1
+        }
+        encrypted_addition_count: 3
+        encrypted_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=32768): 3
+        }
+        clear_multiplication_count: 0
+        encrypted_negation_count: 2
+        encrypted_negation_count_per_parameter: {
+            LweSecretKeyParam(dimension=32768): 2
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2025-09-17 11:49:37 - INFO - common - Ciphertext details:
+2025-09-17 11:49:37 - INFO - common - Ciphertext a:
+[140849157505025               3 844424930131968 ... 281479271677952
+               9      4294967292]
+2025-09-17 11:49:37 - INFO - common - Ciphertext b:
+[140849157505025               3 844424930131968 ... 281479271677952
+               9      4294967292]
+2025-09-17 11:49:37 - INFO - common - Ciphertext result:
+[140849157505025               3 844424930131968 ... 281479271677952
+              16      4294967292]

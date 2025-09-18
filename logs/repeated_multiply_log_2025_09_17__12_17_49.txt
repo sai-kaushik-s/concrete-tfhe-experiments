@@ -1,0 +1,49 @@
+2025-09-17 12:17:49 - INFO - common - Starting FHE repeated multiplication script to observe noise growth...
+2025-09-17 12:17:49 - INFO - common - Arguments: plaintext_modulus=255, initial_value=253, value_to_multiply=127
+2025-09-17 12:17:49 - INFO - common - Circuit successfully compiled.
+2025-09-17 12:17:49 - INFO - common - Compiler statistics:
+
+Statistics
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+size_of_secret_keys: 270456
+size_of_bootstrap_keys: 3268411392
+size_of_keyswitch_keys: 1908408320
+p_error: 9.974665205367475e-06
+global_p_error: 1.994923091678899e-05
+complexity: 10487527394.0
+functions: {
+    multiply: {
+        size_of_inputs: 524304
+        size_of_outputs: 262152
+        programmable_bootstrap_count: 2
+        programmable_bootstrap_count_per_parameter: {
+            BootstrapKeyParam(polynomial_size=32768, glwe_dimension=1, input_lwe_dimension=1039, level=3, base_log=11, variance=0.000000): 2
+        }
+        key_switch_count: 2
+        key_switch_count_per_parameter: {
+            KeyswitchKeyParam(level=7, base_log=3, variance=0.000000): 2
+        }
+        packing_key_switch_count: 0
+        clear_addition_count: 1
+        clear_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=32768): 1
+        }
+        encrypted_addition_count: 3
+        encrypted_addition_count_per_parameter: {
+            LweSecretKeyParam(dimension=32768): 3
+        }
+        clear_multiplication_count: 0
+        encrypted_negation_count: 2
+        encrypted_negation_count_per_parameter: {
+            LweSecretKeyParam(dimension=32768): 2
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2025-09-17 12:17:49 - INFO - common - Encrypting initial accumulator with 253 and the constant with 127.
+2025-09-17 12:18:27 - INFO - common - ============================================================
+2025-09-17 12:18:27 - INFO - common - Starting repeated multiplication loop to observe noise growth...
+2025-09-17 12:18:27 - INFO - common - ============================================================
+2025-09-17 12:18:34 - INFO - common - Iteration   1: OK | Expected: 32131 | Decrypted: 32131
